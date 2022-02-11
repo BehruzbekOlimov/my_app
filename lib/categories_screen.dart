@@ -3,6 +3,8 @@ import 'package:my_app/category_item.dart';
 import 'package:my_app/dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
+  static const String  routeName = '/';
+
   const CategoriesScreen({Key? key}) : super(key: key);
 
   @override
@@ -19,7 +21,7 @@ class CategoriesScreen extends StatelessWidget {
           crossAxisSpacing: 20,
           mainAxisSpacing: 20,
         ),
-        children: DUMMY_CATEGORIES.map((category) => CategoryItem(title: category.name, color: category.color)).toList(),
+        children: DUMMY_CATEGORIES.map((category) => CategoryItem(title: category.name, color: category.color, id: category.id,)).toList(),
       ),
     );
   }

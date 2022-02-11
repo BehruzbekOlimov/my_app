@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/categories_screen.dart';
+import 'package:my_app/category_meals_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         bodyText1: const TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
         bodyText2: const TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
         headline6: const TextStyle(
-          fontSize: 24,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
           fontFamily: 'RobotoCondensed',
         ),
       ),
@@ -29,7 +31,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: theme.copyWith(
           colorScheme: theme.colorScheme.copyWith(secondary: Colors.amber)),
-      home: const CategoriesScreen(),
+      // home: const CategoriesScreen(),
+      initialRoute: CategoriesScreen.routeName,
+      routes: {
+        CategoriesScreen.routeName: (context) => const CategoriesScreen(),
+        CategoryMealsScreen.routeName: (context) => const CategoryMealsScreen()
+      },
     );
   }
 }
