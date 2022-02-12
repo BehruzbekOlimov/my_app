@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/screens/FiltersScreen.dart';
+import 'package:my_app/screens/filters_screen.dart';
 import 'package:my_app/screens/categories_screen.dart';
 import 'package:my_app/screens/category_meals_screen.dart';
 import 'package:my_app/screens/meal_detail_screen.dart';
